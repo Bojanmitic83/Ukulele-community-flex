@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Fondamento|Nunito:300,400&display=swap');
+:root {
+    --crna: #292f36;    /* rgb(41, 47, 54) */
+    --zelena: #4ecdc4;  /* rgb(78, 205, 196) */
+    --bela: #fff;
+    --crvena: #ff6b6b;  /* rgb(255, 107, 107) */
+    --svetlosiva: #ede8e8;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fondamento', cursive;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+button {
+    background: transparent;
+    color: var(--crvena);
+    padding: 12px 25px;
+    border: 2px solid var(--crvena);
+    border-radius: 30px;
+    transition: var(--transition);
+}
+button:hover {
+    color: var(--zelena);
+    border: 2px solid var(--zelena);
+    cursor: pointer;
+}
+/*******************
+header
+********************/
+header {
+    background-image: linear-gradient(rgba(41,47,54,.8),rgba(41,47,54,.8)),url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header h1 {
+    color: var(--bela);
+    font-size: 3rem;
+}
+header p {
+    color: var(--svetlosiva);
+    margin: 30px 0 15px 0;
+}
+/*******************
+about
+********************/
+.about {
+    background: var(--svetlosiva);
+    padding: 50px;
+}
+.about article {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about article:first-child {
+    margin-bottom: 50px;
+}
+.about article div {
+    flex: 0 0 50%;
+}
+.about article img {
+    width: 100%;
+    display: block;
+}
+.about article:first-child div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: var(--bela);
+    padding: 30px;
+}
+.about article:last-child div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background: var(--bela);
+    padding: 30px;
+    text-align: right;
+}
+.about article div:last-child h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.about article div:last-child p {
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.about article:last-child div:first-child {
+    order: 1;
+}
+/*******************
+images
+********************/
+.images {
+    padding: 50px 50px;
+}
+.images h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: var(--crvena);
+}
+.images .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px;
+    
+}
+.images .row div {
+    flex: 0 0 22%;
+    margin-bottom: 40px;
+}
+.images .row div img {
+    width: 100%;
+    box-shadow: 5px 20px 10px gray;
+}
+.images button {
+    display: block;
+    margin: auto;
+}
+/*******************
+footer
+********************/
+footer {
+    background: var(--crvena);
+    text-align: center;
+}
+footer h2 {
+    font-size: 1.8rem;
+}
+.footer-container {
+    width: 50%;
+    margin: auto;
+}
+footer form {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer form div {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:40px;
+    align-items: flex-start;
+}
+footer form div label {
+    font-size: 1rem;
+    font-weight: 700;
+    padding:0 0 5px 10px;
+
+}
+footer input,
+footer textarea {
+    display: block;
+    width: 100%;
+    background: rgba(255,255,255,.2);
+    border: 1px solid var(--svetlosiva);
+    font-size: .8rem;
+    padding: 10px;
+}
+footer form button {
+    border: 1px solid var(--svetlosiva);
+    color: var(--svetlosiva);
+    display: inline-block;
+    margin: auto;
+}
+footer .public i{
+    color: var(--crvena);
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 50%;
+    background: var(--bela);
+    margin: 30px;
+}
+/********************
+rs
+*********************/
+@media(max-width:768px) {
+    .container,
+    .footer-container {
+        width: 95%;
+        margin: auto;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        padding-left: 20px;
+    }
+    .about article div {
+        flex: 0 0 100%;
+    }
+    .about article:last-child div:first-child {
+        order: -1;
+    }
+    .images .row div {
+        flex: 0 0 100%;
+    }
+}
